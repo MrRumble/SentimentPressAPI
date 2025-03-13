@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 5002
 
-CMD ["python", "run.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5002", "app:app"]
