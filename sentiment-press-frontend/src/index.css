@@ -1,0 +1,54 @@
+/* General Reset and Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #131313; /* Dark background */
+  color: #FAFAFA; /* Light text */
+  font-size: 14px; /* Smaller global font size */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #424242; /* Slightly lighter dark background for code */
+  color: #FAFAFA; /* Light code text */
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 12px; /* Smaller font size for code */
+}
+
+a {
+  color: #686868; /* Muted color for links */
+  text-decoration: none;
+  font-size: inherit; /* Keep links the same as surrounding text */
+}
+
+a:hover {
+  color: #FAFAFA; /* Light color on hover */
+}
+
+/* Additional Global Font Size Adjustments */
+h1 {
+  font-size: 1.8em; /* Smaller heading size */
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 13px; /* Smaller paragraph text */
+  line-height: 1.6; /* Keep readability */
+}
+
+button, input, textarea {
+  font-size: 13px; /* Smaller input and button text */
+}

@@ -1,0 +1,22 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore Git-related files
+.git/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment files
+.env
+
+# Ignore OS-specific files (macOS example)
+.DS_Store
+
+# Ignore node_modules (if you're using Node.js)
+node_modules/
+
+# Ignore logs
+*.log
