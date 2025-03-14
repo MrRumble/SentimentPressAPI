@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from app.routes.query_route import query_route
 from app.routes.sentiment_route import sentiment_route
 from app.routes.landing_routes import landing_route
+from app.routes.insert_data import insert_data_route
 import os
 
 load_dotenv()
@@ -12,6 +13,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+app.register_blueprint(insert_data_route)
 app.register_blueprint(query_route)
 app.register_blueprint(sentiment_route)
 app.register_blueprint(landing_route)
