@@ -1,9 +1,3 @@
--- Create the database if it doesn't exist
-CREATE DATABASE sentiment_press_db_prod;
-
--- Switch to the newly created database
-\c sentiment_press_db_prod;
-
 -- Create the search_metadata table
 CREATE TABLE search_metadata (
     search_metadata_id SERIAL PRIMARY KEY,
