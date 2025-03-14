@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "frontend_bucket" {
-  bucket = "sentimentpress-frontend"  # Change this to a globally unique bucket name
+  bucket = "sentimentpress-frontend-1"  # Change this to a globally unique bucket name
 }
 
 resource "aws_s3_bucket_ownership_controls" "frontend_bucket_ownership" {
