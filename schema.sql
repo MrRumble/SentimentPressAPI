@@ -1,3 +1,10 @@
+-- Create the database if it doesn't exist
+CREATE DATABASE sentiment_press_db_prod;
+
+-- Switch to the newly created database
+\c sentiment_press_db_prod;
+
+-- Create the search_metadata table
 CREATE TABLE search_metadata (
     search_metadata_id SERIAL PRIMARY KEY,
     user_id INT,
@@ -5,6 +12,7 @@ CREATE TABLE search_metadata (
     searched_at TIMESTAMP DEFAULT NOW()
 );
 
+-- Create the search_results table
 CREATE TABLE search_results (
     search_result_id SERIAL PRIMARY KEY,
     search_term VARCHAR(255),
