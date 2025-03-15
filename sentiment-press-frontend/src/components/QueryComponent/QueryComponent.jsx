@@ -48,7 +48,6 @@ const QueryComponent = ({ onSearch, query }) => {
         const data = await response.json();
         setResult(data);
         onSearch(query);
-        console.log("Received data:", data);
         if (typeof data.top3 === 'string') {
           data.top3 = JSON.parse(data.top3);
         }
