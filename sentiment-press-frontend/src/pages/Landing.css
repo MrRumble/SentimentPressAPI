@@ -15,7 +15,7 @@ body, html, .homepage {
 
 .left-column-landing {
   display: grid;                  
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr;
   height: 90vh;                   
   padding: 10px;                    
 }
@@ -27,7 +27,6 @@ body, html, .homepage {
   padding: 10px;
   overflow-y: auto;  
 }
-
 
 .top-row-landing {
   display: grid;                 
@@ -69,3 +68,60 @@ body, html, .homepage {
   width: 100%;
 
 }
+
+@media (max-width: 1024px) { 
+  .landingpage {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .left-column-landing, 
+  .right-column-landing {
+    height: auto;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .right-column-landing {
+    overflow-y: visible;
+  }
+
+  .top-row-landing {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .middle-row-landing {
+    grid-template-rows: auto;
+    padding: 5px;
+  }
+
+  .spinning-globe-landing {
+    width: 150px;
+    height: 150px;
+  }
+
+  .website-name-landing {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .spinning-globe-landing {
+    width: 120px;
+    height: 120px;
+  }
+
+  .website-name-landing {
+    font-size: 1.8rem;
+  }
+
+  .left-column-landing, 
+  .right-column-landing {
+    padding: 10px;
+  }
+}
+
