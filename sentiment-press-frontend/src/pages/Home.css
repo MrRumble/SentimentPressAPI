@@ -3,82 +3,84 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;  /* Ensure the page takes full height of the viewport */
+  height: 100%;  
 }
 
-/* Homepage container */
+
 .homepage {
   display: grid;
-  grid-template-columns: 1fr 1.1fr; /* Two equal columns */
-  grid-template-rows: auto;        /* Allow the rows to adjust based on content */
-  min-height: 100vh;                /* Ensure the homepage takes at least the height of the viewport */
-  overflow-y: hidden;                 /* Allows scrolling only if content exceeds the height */
+  grid-template-columns: 1fr 1.1fr; 
+  grid-template-rows: auto;        
+  min-height: 100vh;                
+  overflow-y: hidden;                 
 }
   
   .left-column {
-    display: grid;                  /* Use grid to handle rows inside left column */
-    grid-template-rows: 1fr;     /* Two rows: top takes less space, bottom takes more space */
-    overflow-y: auto;         /* Allow scrolling in the left column */
-    padding: 5px;                   /* Optional: Add padding for better content separation */
+    display: grid;                 
+    grid-template-rows: 1fr;     
+    overflow-y: auto;         
+    padding: 5px;                   
   }
   
   .right-column {
-    display: grid;                  /* Use grid display to handle multiple rows */
-    grid-template-rows: 1fr 3fr 1fr;     /* Two rows of equal height */
-    height: 100vh;                   /* Take full height of the right column */
-    padding: 5px;                   /* Optional: Add padding */
+    display: grid;                  
+    grid-template-rows: 1fr 3fr 1fr;    
+    height: 100vh;                  
+    padding: 5px;                   
   }
   
   .top-row {
-    display: grid;                 /* Use grid to split into two columns */
-    grid-template-columns: 1fr 4fr; /* Two equal columns */
-    justify-items: left;          /* Center the content inside each grid cell */
-    align-items: center;            /* Center vertically */
-    position: sticky;               /* Sticky positioning */
-    top: 0;                         /* Stick to the top of the viewport */
-    height: 50%;                    /* Take half the height of the right column */
+    display: grid;                 
+    grid-template-columns: 1fr 4fr; 
+    justify-items: left;          
+    align-items: center;            
+    position: sticky;               
+    top: 0;                         
+    height: 50%;                    
     padding: 20px;
   }
   
   .bottom-row {
     display: flex;
-    justify-content: center;         /* Center content horizontally in bottom row */
-    align-items: flex-start;         /* Align content to the top in bottom row */
-    height: 100%;                     /* Second row takes half the height of the right column */                 
+    justify-content: center;        
+    align-items: flex-start;        
+    height: 100%;                                    
   }
   
   .spinning-globe {
     display: flex;
-    justify-content: center;         /* Center horizontally */
-    align-items: center;             /* Center vertically */
-    height: 200px;                   /* Fixed height */
-    width: 200px;                    /* Fixed width */
-    border-radius: 10px;             /* Optional: Rounded corners */
-    overflow: hidden;                /* Optional: Clip overflow */
+    justify-content: center;         
+    align-items: center;             
+    height: 200px;                   
+    width: 200px;                    
+    border-radius: 10px;             
+    overflow: hidden;                
   }
   
   .website-name {
     font-size: 3rem;
     font-weight: bold;
-    color: #ffffff;  /* You can change this to your preferred color */
+    color: #ffffff;  
     text-align: left;
   }
 
   .third-row {
     display: flex;
-    justify-content: center;         /* Center the links horizontally */
-    align-items: center;             /* Center the links vertically */
-    height: 100%;                    /* Take full height of the new row */
+    justify-content: center;         
+    align-items: center;             
+    height: 100%;                    
     gap: 20px;                       
   }
   
   .third-row a {
     font-size: 1.2rem;
-    color: #ffffff;                  /* Link color, adjust as needed */
-    text-decoration: none;           /* Remove underlining */
+    color: #ffffff;                 
+    text-decoration: none;           
     font-weight: bold;
   }
   
   .third-row a:hover {
-    text-decoration: underline;      /* Underline on hover for visual effect */
+    text-decoration: underline;    
   }
+
+  

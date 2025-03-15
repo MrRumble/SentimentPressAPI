@@ -48,6 +48,13 @@ const QueryComponent = ({ onSearch, query }) => {
         const data = await response.json();
         setResult(data);
         onSearch(query);
+        console.log("Received data:", data);
+        if (typeof data.top3 === 'string') {
+          data.top3 = JSON.parse(data.top3);
+        }
+        if (typeof data.bottom3 === 'string') {
+          data.bottom3 = JSON.parse(data.bottom3);
+        }
 
         triggerRefresh();
 
@@ -58,7 +65,7 @@ const QueryComponent = ({ onSearch, query }) => {
     } catch (err) {
       setError('Failed to fetch data. Please check your connection.');
     } finally {
-      setIsLoading(false);  // Stop loading after the request is done
+      setIsLoading(false);  
     }
   };
 
@@ -74,7 +81,7 @@ const QueryComponent = ({ onSearch, query }) => {
 
   useEffect(() => {
     if (query) {
-      handleQuerySubmit(new Event('submit'));  // Automatically trigger search when query is passed
+      handleQuerySubmit(new Event('submit')); 
     }
   }, [query]);
 
