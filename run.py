@@ -11,11 +11,13 @@ load_dotenv()
 
 app = Flask(__name__)
 
-CORS(app, resources={
-    r"/api/*": {"origins": "https://d1ya212cbyxvmq.cloudfront.net"},
-    r"/*": {"origins": "https://d1ya212cbyxvmq.cloudfront.net"}
-})
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 app.register_blueprint(insert_data_route)
 app.register_blueprint(query_route)
