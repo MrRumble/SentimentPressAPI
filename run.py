@@ -9,9 +9,13 @@ import os
 
 load_dotenv()
 
-# Create a new Flask app
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={
+    r"/api/*": {"origins": "https://d1ya212cbyxvmq.cloudfront.net"},
+    r"/*": {"origins": "https://d1ya212cbyxvmq.cloudfront.net"}
+})
+
 
 app.register_blueprint(insert_data_route)
 app.register_blueprint(query_route)
@@ -19,6 +23,4 @@ app.register_blueprint(sentiment_route)
 app.register_blueprint(landing_route)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002))) 
-
-
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002)))
